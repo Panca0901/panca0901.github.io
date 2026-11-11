@@ -1,5 +1,5 @@
 export const SITE = {
-    website: "https://simple-portfolio.vicbox.dev", // replace this with your deployed domain
+    website: "https://Panca0901.github.io", // replace this with your deployed domain
     title: "Simple Portfolio",
     description: "A simple but beautiful portfolio created with Astro",
     tags: ["portfolio", "Resume cv", "Astro"],
@@ -14,26 +14,26 @@ export const SITE = {
 }
 
 export const ME = {
-    name: "VicBox Dot Dev",
-    profession: "Software Engineer | Full Stack Developer",
-    profileImage: "pp2.png",
+    name: "Pangeran Candraning Edhi",
+    profession: "Statistics Undergraduate | Quantitative Analysis & Data Science",
+    profileImage: "panca1.jpeg",
     profileFacts: [
         {
-            value: 10,
+            value: 0,
             description: "Years of Experience"
         },
         {
-            value: 5,
+            value: 3,
             description: "Completed Projects"
         },
         {
-            value: 4,
+            value: 0,
             description: "Satisfied Clients"
         }
     ],
     contactInfo: {
-        email: "vicbox.dev@vicbox.dev",
-        linkedin: "https://www.linkedin.com/in/victor-alvaradohn",
+        email: "pangeran3ce@gmail.com",
+        linkedin: "https://www.linkedin.com/in/pangeran-candraning-edhi-aa96683bb",
         resumeDoc: "resume.pdf",
     },
     aboutMe: "I am a software engineer with a passion for web development. I have experience in building web " + "applications using modern technologies. I am a self-taught developer who enjoys learning new things and " + "sharing knowledge with others.",
