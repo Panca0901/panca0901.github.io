@@ -36,7 +36,10 @@ export const ME = {
         linkedin: "https://www.linkedin.com/in/pangeran-candraning-edhi-aa96683bb",
         resumeDoc: "resume.pdf",
     },
-    aboutMe: "I am a software engineer with a passion for web development. I have experience in building web " + "applications using modern technologies. I am a self-taught developer who enjoys learning new things and " + "sharing knowledge with others.",
+    aboutMe:   aboutMe: "Saya adalah mahasiswa Statistika yang memiliki ketertarikan besar di bidang Data Science dan " +
+    "Quantitative Analysis. Saya terbiasa mengolah data, membangun model prediksi, serta mengubah data mentah " +
+    "menjadi wawasan yang bernilai strategis. Saya selalu bersemangat untuk mempelajari teknologi analisis data " +
+    "terbaru dan memecahkan tantangan berbasis data.",
 }
 
 export const SOCIALS = [
@@ -44,7 +47,7 @@ export const SOCIALS = [
         name: "Twitter",
         url: "https://twitter.com/vicbox.dev",
         icon: "twitter-x-fill",
-        show: true
+        show: false
     },
     {
         name: "Facebook",
@@ -62,7 +65,7 @@ export const SOCIALS = [
         name: "Youtube",
         url: "https://www.youtube.com/vicbox.dev",
         icon: "youtube-fill",
-        show: true
+        show: false
     },
     {
         name: "TikTok",
