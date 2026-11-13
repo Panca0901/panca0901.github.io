@@ -12,7 +12,10 @@ import EduDetail from "./EduDetail.astro";
 import SkillCard from "./SkillCard.astro";
 
 // config import
-import {ME} from '@/config';
+import { ME, ME_ID } from '@/config';
+
+const isIndonesian = Astro.url.pathname.startsWith('/id');
+const profileData = isIndonesian ? ME_ID : ME;
 
 ---
 
@@ -20,7 +23,7 @@ import {ME} from '@/config';
     {/*Description or About me -- Section*/}
     <div class="mb-4">
         <p>
-            {ME.aboutMe}
+            {profileData.aboutMe}
         </p>
     </div>
     {/*Work experience section*/}

@@ -12,16 +12,24 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://simple-portfolio.vicbox.dev/',
-    integrations: [mdx(), react(), tailwind({
-        applyBaseStyles: false,
-    }), icon(), sitemap()],
-    markdown: {
-        shikiConfig: {
-            theme: 'plastic',
-            wrap: true,
-        },
+  site: 'https://panca0901.github.io',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'id'],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  },
+  integrations: [mdx(), react(), tailwind({
+    applyBaseStyles: false,
+  }), icon(), sitemap()],
+  markdown: {
+    shikiConfig: {
+      theme: 'plastic',
+      wrap: true,
     },
-    experimental: {
-        svg: true,
-    }});
+  },
+  experimental: {
+    svg: true,
+  },
+});

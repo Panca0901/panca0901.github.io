@@ -4,9 +4,10 @@ import ProfileImage from "./ProfileImage.astro";
 import Social from "./Social.astro";
 
 // config import
-import {ME} from '@/config';
+import { ME, ME_ID } from '@/config';
 
-const { name, profession } = ME;
+const isIndonesian = Astro.url.pathname.startsWith('/id');
+const { name, profession } = isIndonesian ? ME_ID : ME;
 ---
 
 <div class={'w-full flex items-center justify-start mt-5'} >

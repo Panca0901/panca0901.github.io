@@ -60,7 +60,37 @@ const {
     <title>{title}</title>
     <ClientRouter/>
 </head>
-<body class="bg-light-theme dark:bg-dark-theme antialiased text-n700 dark:text-light-theme w-full h-screen flex flex-col">
+<body class="bg-light-theme dark:bg-dark-theme antialiased text-n700 dark:text-light-theme w-full min-h-screen flex flex-col relative overflow-x-hidden">
+    <div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden select-none">
+        <!-- Cahaya Ambient Hologram Halus -->
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[650px] h-[320px] bg-gradient-to-r from-sky-400/15 via-purple-500/15 to-pink-400/15 blur-3xl rounded-full"></div>
+
+        <!-- Lantai Grid Perspektif 3D -->
+        <div class="stat-grid-3d"></div>
+
+        <!-- Kurva Distribusi Normal (Bell Curve) & Titik Scatter Plot -->
+        <svg class="absolute bottom-0 left-0 w-full h-72 opacity-30 dark:opacity-25" viewBox="0 0 1200 300" fill="none" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="curveHolo" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#38BDF8" />
+                    <stop offset="50%" stop-color="#C084FC" />
+                    <stop offset="100%" stop-color="#34D399" />
+                </linearGradient>
+            </defs>
+            <!-- Kurva Lonceng Statistika -->
+            <path d="M 0 260 C 250 260, 380 40, 600 40 C 820 40, 950 260, 1200 260" stroke="url(#curveHolo)" stroke-width="2.5" stroke-dasharray="6 4" />
+            <path d="M 0 275 C 300 275, 430 110, 600 110 C 770 110, 900 275, 1200 275" stroke="url(#curveHolo)" stroke-width="1.5" opacity="0.6" />
+            <!-- Garis Mean (Rata-rata) Vertikal -->
+            <line x1="600" y1="20" x2="600" y2="290" stroke="#C084FC" stroke-width="1" stroke-dasharray="4 4" opacity="0.5" />
+            <!-- Titik-titik Scatter Plot -->
+            <circle cx="280" cy="210" r="4" fill="#38BDF8" class="animate-pulse" />
+            <circle cx="420" cy="130" r="5" fill="#C084FC" class="animate-pulse" />
+            <circle cx="530" cy="70" r="4" fill="#F472B6" class="animate-pulse" />
+            <circle cx="670" cy="75" r="5" fill="#34D399" class="animate-pulse" />
+            <circle cx="790" cy="145" r="4" fill="#38BDF8" class="animate-pulse" />
+            <circle cx="920" cy="215" r="4" fill="#C084FC" class="animate-pulse" />
+        </svg>
+    </div>
 <Navbar/>
 <main class="container py-24 flex gap-8 flex-col" role="main"  id="top">
     <slot/>
@@ -68,3 +98,30 @@ const {
 <Footer/>
 </body>
 </html>
+<style>
+    .stat-grid-3d {
+        position: absolute;
+        inset: -50%;
+        width: 200%;
+        height: 200%;
+        background-image: 
+            linear-gradient(to right, rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(192, 132, 252, 0.08) 1px, transparent 1px);
+        background-size: 48px 48px;
+        transform: perspective(600px) rotateX(60deg) translateY(-100px);
+        transform-origin: center top;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 10%, transparent 75%);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 10%, transparent 75%);
+        animation: gridMove 18s linear infinite;
+    }
+
+    @keyframes gridMove {
+        0% {
+            transform: perspective(600px) rotateX(60deg) translateY(0px);
+        }
+        100% {
+            transform: perspective(600px) rotateX(60deg) translateY(48px);
+        }
+    }
+</style>
+
