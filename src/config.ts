@@ -34,7 +34,7 @@ export const ME = {
     contactInfo: {
         email: "pangeran3ce@gmail.com",
         linkedin: "https://www.linkedin.com/in/pangeran-candraning-edhi-aa96683bb",
-        resumeDoc: "resume.pdf",
+        resumeDoc: "CV.pdf",
     },
     aboutMe: "Saya adalah mahasiswa Statistika yang memiliki ketertarikan besar di bidang Data Science dan " + "Quantitative Analysis. Saya terbiasa mengolah data, membangun model prediksi, serta mengubah data mentah " + "menjadi wawasan yang bernilai strategis. Saya selalu bersemangat untuk mempelajari teknologi analisis data " + "terbaru dan memecahkan tantangan berbasis data.",
 }
