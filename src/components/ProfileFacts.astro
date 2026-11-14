@@ -1,8 +1,9 @@
 ---
 // config import
-import { ME } from '@/config'
+import { ME, ME_ID } from '@/config'
 
-const { profileFacts } = ME
+const isIndonesian = Astro.url.pathname.startsWith('/id');
+const { profileFacts } = isIndonesian ? ME_ID : ME;
 ---
 
 <div class="flex justify-between gap-1 text-center">

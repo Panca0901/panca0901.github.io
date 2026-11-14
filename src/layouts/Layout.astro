@@ -60,7 +60,222 @@ const {
     <title>{title}</title>
     <ClientRouter/>
 </head>
-<body class="bg-light-theme dark:bg-dark-theme antialiased text-n700 dark:text-light-theme w-full h-screen flex flex-col">
+<body class="bg-light-theme dark:bg-dark-theme antialiased text-n700 dark:text-light-theme w-full min-h-screen flex flex-col relative overflow-x-hidden">
+    <div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden select-none">
+        <!-- Cahaya Ambient Hologram Halus -->
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-r from-fuchsia-600/25 via-purple-600/25 to-pink-500/25 blur-3xl rounded-full"></div>
+
+        <!-- Lantai Grid Perspektif 3D -->
+        <div class="stat-grid-3d"></div>
+
+        <!-- Kurva Distribusi Normal (Bell Curve) & Titik Scatter Plot -->
+        <svg class="absolute bottom-0 left-0 w-full h-72 opacity-30 dark:opacity-25" viewBox="0 0 1200 300" fill="none" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="curveHolo" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#F472B6" />
+                    <stop offset="50%" stop-color="#C084FC" />
+                    <stop offset="100%" stop-color="#E879F9" />
+                </linearGradient>
+            </defs>
+            <!-- Kurva Lonceng Statistika -->
+            <path d="M 0 260 C 250 260, 380 40, 600 40 C 820 40, 950 260, 1200 260" stroke="url(#curveHolo)" stroke-width="2.5" stroke-dasharray="6 4" />
+            <path d="M 0 275 C 300 275, 430 110, 600 110 C 770 110, 900 275, 1200 275" stroke="url(#curveHolo)" stroke-width="1.5" opacity="0.6" />
+            <!-- Garis Mean (Rata-rata) Vertikal -->
+            <line x1="600" y1="20" x2="600" y2="290" stroke="#C084FC" stroke-width="1" stroke-dasharray="4 4" opacity="0.5" />
+            <!-- Titik-titik Scatter Plot -->
+            <circle cx="280" cy="210" r="4" fill="#F472B6" class="animate-pulse" />
+            <circle cx="420" cy="130" r="5" fill="#C084FC" class="animate-pulse" />
+            <circle cx="530" cy="70" r="4" fill="#F472B6" class="animate-pulse" />
+            <circle cx="670" cy="75" r="5" fill="#E879F9" class="animate-pulse" />
+            <circle cx="790" cy="145" r="4" fill="#F472B6" class="animate-pulse" />
+            <circle cx="920" cy="215" r="4" fill="#C084FC" class="animate-pulse" />
+        </svg>
+		        <!-- 3D Data Science & Quantitative Dashboard Background (Kiri-Kanan + Animasi) -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none select-none opacity-85 dark:opacity-50">
+      
+      <!-- ================= SISI KIRI ================= -->
+      
+      <!-- 1. Floating 3D Isometric Data Cubes & Matrix HUD (Kiri Atas-Tengah) -->
+      <svg
+        class="absolute top-24 -left-8 w-[420px] md:w-[580px] h-auto opacity-80 hud-float-slow"
+        viewBox="0 0 550 450"
+        fill="none"
+        xmlns="http://w3.org"
+      >
+        <defs>
+          <linearGradient id="cubeTopL" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F9A8D4" stop-opacity="0.5" />
+            <stop offset="100%" stop-color="#E879F9" stop-opacity="0.3" />
+          </linearGradient>
+          <linearGradient id="cubeSideL" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#EC4899" stop-opacity="0.28" />
+            <stop offset="100%" stop-color="#581C87" stop-opacity="0.06" />
+          </linearGradient>
+        </defs>
+
+        <!-- Panel Hologram Distribusi & Metrik (Kiri Atas) -->
+        <g transform="translate(65, 35) skewY(7)">
+          <rect x="0" y="0" width="190" height="100" rx="10" class="fill-white/75 dark:fill-[#241038]/55 stroke-pink-500 dark:stroke-[#E879F9]" stroke-width="1.4" />
+          <circle cx="15" cy="14" r="3" fill="#F472B6" />
+          <circle cx="25" cy="14" r="3" fill="#C084FC" />
+          <line x1="38" y1="14" x2="110" y2="14" stroke="#F9A8D4" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+          <!-- Histogram Mini di Dalam Panel -->
+          <rect x="20" y="58" width="12" height="26" rx="2" fill="#F472B6" fill-opacity="0.6" />
+          <rect x="40" y="42" width="12" height="42" rx="2" fill="#E879F9" fill-opacity="0.7" />
+          <rect x="60" y="30" width="12" height="54" rx="2" fill="#F9A8D4" fill-opacity="0.8" />
+          <rect x="80" y="46" width="12" height="38" rx="2" fill="#C084FC" fill-opacity="0.7" />
+          <rect x="100" y="54" width="12" height="30" rx="2" fill="#F472B6" fill-opacity="0.6" />
+          <!-- Lingkaran Persentase -->
+          <circle cx="152" cy="56" r="20" stroke="#C084FC" stroke-width="2" stroke-dasharray="4 3" opacity="0.5" />
+          <path d="M152 36 A20 20 0 1 1 134 65" stroke="#F472B6" stroke-width="2.5" stroke-linecap="round" />
+        </g>
+
+        <!-- Gugusan Kubus Data 3D Melayang (Isometric Data Clusters) -->
+        <g class="bar-breathe-1" transform="translate(80, 220)">
+          <polygon points="0,0 30,-16 60,0 30,16" fill="url(#cubeTopL)" stroke="#F9A8D4" stroke-width="1.2" />
+          <polygon points="0,0 30,16 30,52 0,36" fill="url(#cubeSideL)" stroke="#F472B6" stroke-width="1" />
+          <polygon points="30,16 60,0 60,36 30,52" fill="url(#cubeSideL)" stroke="#C084FC" stroke-width="1" />
+        </g>
+
+        <g class="bar-breathe-2" transform="translate(155, 195)">
+          <polygon points="0,0 35,-18 70,0 35,18" fill="url(#cubeTopL)" stroke="#F9A8D4" stroke-width="1.3" />
+          <polygon points="0,0 35,18 35,78 0,60" fill="url(#cubeSideL)" stroke="#F472B6" stroke-width="1.1" />
+          <polygon points="35,18 70,0 70,60 35,78" fill="url(#cubeSideL)" stroke="#C084FC" stroke-width="1.1" />
+          <!-- Garis Koneksi Antar Node 3D -->
+          <line x1="35" y1="-18" x2="115" y2="-45" stroke="#F472B6" stroke-width="1" stroke-dasharray="4 4" />
+          <circle cx="115" cy="-45" r="4" fill="#F472B6" class="animate-pulse" />
+        </g>
+
+        <g class="bar-breathe-3" transform="translate(235, 240)">
+          <polygon points="0,0 26,-14 52,0 26,14" fill="url(#cubeTopL)" stroke="#F9A8D4" stroke-width="1.2" />
+          <polygon points="0,0 26,14 26,44 0,30" fill="url(#cubeSideL)" stroke="#F472B6" stroke-width="1" />
+          <polygon points="26,14 52,0 52,30 26,44" fill="url(#cubeSideL)" stroke="#C084FC" stroke-width="1" />
+        </g>
+      </svg>
+
+      <!-- 2. 3D Isometric Surface Mesh / Wave Plot (Kiri Bawah) -->
+      <svg
+        class="absolute -bottom-10 -left-16 w-[550px] md:w-[760px] h-auto opacity-70 wave-sway"
+        viewBox="0 0 600 400"
+        fill="none"
+        xmlns="http://w3.org"
+      >
+        <defs>
+          <linearGradient id="meshGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F472B6" stop-opacity="0.75" />
+            <stop offset="50%" stop-color="#C084FC" stop-opacity="0.45" />
+            <stop offset="100%" stop-color="#E879F9" stop-opacity="0.05" />
+          </linearGradient>
+        </defs>
+        <g stroke="url(#meshGrad)" stroke-width="1.4">
+          <path d="M20 340 Q140 240, 260 290 T500 220" />
+          <path d="M40 315 Q160 205, 280 265 T520 195" />
+          <path d="M60 290 Q180 170, 300 240 T540 170" />
+          <path d="M80 265 Q200 135, 320 215 T560 145" />
+          <path d="M100 240 Q220 110, 340 190 T580 120" />
+          <path d="M120 215 Q240 130, 360 185 T590 105" />
+          <path d="M80 330 L170 190 M150 310 L240 165 M220 295 L310 175 M290 280 L380 180 M360 260 L450 155 M430 240 L520 130" stroke-dasharray="3 3" />
+        </g>
+        <circle cx="195" cy="155" r="4.5" fill="#F472B6" class="animate-pulse" />
+        <circle cx="345" cy="185" r="4" fill="#E879F9" class="animate-pulse" />
+        <circle cx="480" cy="145" r="4.5" fill="#C084FC" class="animate-pulse" />
+      </svg>
+
+      <!-- ================= SISI KANAN ================= -->
+
+      <!-- 3. 3D Isometric Bar Chart & Hologram Analytics Panel (Kanan Bawah - Atas) -->
+      <svg
+        class="absolute bottom-4 -right-10 w-[520px] md:w-[760px] h-auto opacity-85"
+        viewBox="0 0 700 500"
+        fill="none"
+        xmlns="http://w3.org"
+      >
+        <defs>
+          <linearGradient id="barTop" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F9A8D4" stop-opacity="0.55" />
+            <stop offset="100%" stop-color="#E879F9" stop-opacity="0.35" />
+          </linearGradient>
+          <linearGradient id="barLeft" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#EC4899" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#86198F" stop-opacity="0.08" />
+          </linearGradient>
+          <linearGradient id="barRight" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#A855F7" stop-opacity="0.25" />
+            <stop offset="100%" stop-color="#3B0764" stop-opacity="0.05" />
+          </linearGradient>
+        </defs>
+
+        <!-- Lantai Grid Isometrik 3D -->
+        <g stroke="#F472B6" stroke-opacity="0.24" stroke-width="1">
+          <path d="M220 390 L440 280 L660 390 L440 500 Z" />
+          <path d="M275 362 L495 472 M330 335 L550 445 M385 307 L605 417" />
+          <path d="M605 362 L385 472 M550 335 L330 445 M495 307 L275 417" />
+        </g>
+
+        <!-- Batang 3D ke-1 -->
+        <g class="bar-breathe-1" transform="translate(310, 340)">
+          <polygon points="0,0 35,-18 70,0 35,18" fill="url(#barTop)" stroke="#F9A8D4" stroke-width="1.2" />
+          <polygon points="0,0 35,18 35,88 0,70" fill="url(#barLeft)" stroke="#F472B6" stroke-width="1" />
+          <polygon points="35,18 70,0 70,70 35,88" fill="url(#barRight)" stroke="#C084FC" stroke-width="1" />
+        </g>
+
+        <!-- Batang 3D ke-2 -->
+        <g class="bar-breathe-2" transform="translate(380, 280)">
+          <polygon points="0,0 35,-18 70,0 35,18" fill="url(#barTop)" stroke="#F9A8D4" stroke-width="1.2" />
+          <polygon points="0,0 35,18 35,138 0,120" fill="url(#barLeft)" stroke="#F472B6" stroke-width="1" />
+          <polygon points="35,18 70,0 70,120 35,138" fill="url(#barRight)" stroke="#C084FC" stroke-width="1" />
+        </g>
+
+        <!-- Batang 3D ke-3 (Tinggi Utama) -->
+        <g class="bar-breathe-3" transform="translate(450, 200)">
+          <polygon points="0,0 35,-18 70,0 35,18" fill="url(#barTop)" stroke="#F9A8D4" stroke-width="1.5" />
+          <polygon points="0,0 35,18 35,208 0,190" fill="url(#barLeft)" stroke="#F472B6" stroke-width="1.2" />
+          <polygon points="35,18 70,0 70,190 35,208" fill="url(#barRight)" stroke="#C084FC" stroke-width="1.2" />
+          <line x1="35" y1="-18" x2="35" y2="-65" stroke="#F472B6" stroke-width="1.2" stroke-dasharray="3 3" />
+          <circle cx="35" cy="-65" r="4" fill="#F472B6" class="animate-pulse" />
+        </g>
+
+        <!-- Batang 3D ke-4 -->
+        <g class="bar-breathe-1" transform="translate(520, 255)">
+          <polygon points="0,0 35,-18 70,0 35,18" fill="url(#barTop)" stroke="#F9A8D4" stroke-width="1.2" />
+          <polygon points="0,0 35,18 35,148 0,130" fill="url(#barLeft)" stroke="#F472B6" stroke-width="1" />
+          <polygon points="35,18 70,0 70,130 35,148" fill="url(#barRight)" stroke="#C084FC" stroke-width="1" />
+        </g>
+
+        <!-- Panel Hologram Statistik Melayang (Kanan Tengah) -->
+        <g class="hud-float" transform="translate(265, 105) skewY(-8)">
+          <rect x="0" y="0" width="185" height="95" rx="10" class="fill-white/75 dark:fill-[#241038]/55 stroke-pink-500 dark:stroke-[#F472B6]" stroke-width="1.4" />
+          <circle cx="14" cy="14" r="3" fill="#F472B6" />
+          <circle cx="24" cy="14" r="3" fill="#E879F9" />
+          <circle cx="34" cy="14" r="3" fill="#C084FC" />
+          <line x1="48" y1="14" x2="115" y2="14" stroke="#F9A8D4" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+          <polyline
+            points="16,72 48,55 80,62 115,36 148,42 170,24"
+            fill="none"
+            stroke="#F472B6"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <circle cx="115" cy="36" r="3.5" fill="#F9A8D4" />
+          <circle cx="170" cy="24" r="4" fill="#F472B6" class="animate-pulse" />
+        </g>
+
+        <!-- Diagram Radar Berputar Pelan (Kanan Atas) -->
+        <g transform="translate(595, 115)">
+          <g class="radar-spin">
+		              <circle cx="0" cy="0" r="55" stroke="#C084FC" stroke-width="1" stroke-dasharray="4 4" opacity="0.6" />
+            <circle cx="0" cy="0" r="36" stroke="#F472B6" stroke-width="1.2" opacity="0.7" />
+            <circle cx="0" cy="0" r="18" stroke="#E879F9" stroke-width="1" opacity="0.5" />
+            <line x1="-65" y1="0" x2="65" y2="0" stroke="#F472B6" stroke-width="0.8" opacity="0.4" />
+            <line x1="0" y1="-65" x2="0" y2="65" stroke="#F472B6" stroke-width="0.8" opacity="0.4" />
+            <polygon points="0,-42 32,-12 22,28 -28,20 -35,-18" fill="#EC4899" fill-opacity="0.22" stroke="#F9A8D4" stroke-width="1.5" />
+          </g>
+        </g>
+      </svg>
+
+    </div>
+  </div>
 <Navbar/>
 <main class="container py-24 flex gap-8 flex-col" role="main"  id="top">
     <slot/>
@@ -68,3 +283,78 @@ const {
 <Footer/>
 </body>
 </html>
+<style>
+    .stat-grid-3d {
+        position: absolute;
+        inset: -50%;
+        width: 200%;
+        height: 200%;
+        background-image: 
+            linear-gradient(to right, rgba(236, 72, 153, 0.12) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(192, 132, 252, 0.08) 1px, transparent 1px);
+        background-size: 48px 48px;
+        transform: perspective(600px) rotateX(60deg) translateY(-100px);
+        transform-origin: center top;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 10%, transparent 75%);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 10%, transparent 75%);
+        animation: gridMove 18s linear infinite;
+    }
+
+    @keyframes gridMove {
+        0% {
+            transform: perspective(600px) rotateX(60deg) translateY(0px);
+        }
+        100% {
+            transform: perspective(600px) rotateX(60deg) translateY(48px);
+        }
+    }
+	  /* Animasi Mengambang Halus untuk Panel Hologram */
+  .hud-float {
+    animation: floatHud 6s ease-in-out infinite;
+  }
+  .hud-float-slow {
+    animation: floatHud 8s ease-in-out infinite reverse;
+  }
+
+  /* Animasi Batang & Kubus 3D Naik-Turun Halus */
+  .bar-breathe-1 {
+    animation: barFloat 5s ease-in-out infinite;
+  }
+  .bar-breathe-2 {
+    animation: barFloat 6.5s ease-in-out infinite 0.8s;
+  }
+  .bar-breathe-3 {
+    animation: barFloat 5.5s ease-in-out infinite 1.5s;
+  }
+
+  /* Animasi Gelombang Surface Mesh */
+  .wave-sway {
+    animation: waveMove 9s ease-in-out infinite;
+  }
+
+  /* Animasi Putaran Pelan Radar */
+  .radar-spin {
+    animation: slowSpin 28s linear infinite;
+  }
+
+  @keyframes floatHud {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes barFloat {
+    0%, 100% { filter: drop-shadow(0 0 0px rgba(244, 114, 182, 0)); }
+    50% { filter: drop-shadow(0 0 8px rgba(244, 114, 182, 0.35)); }
+  }
+
+  @keyframes waveMove {
+    0%, 100% { transform: translate(0px, 0px) scale(1); }
+    50% { transform: translate(12px, -8px) scale(1.02); }
+  }
+
+  @keyframes slowSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+</style>
+
