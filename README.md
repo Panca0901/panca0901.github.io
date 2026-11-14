@@ -2,7 +2,7 @@
 
 Situs web portofolio pribadi yang dibangun menggunakan framework **Astro** dan **Tailwind CSS**, serta dipublikasikan secara otomatis menggunakan **GitHub Actions** ke **GitHub Pages**. Situs ini dibuat untuk menampilkan profil akademik, latar belakang pendidikan di Program Studi Statistika FMIPA Universitas Cenderawasih, proyek analisis data, serta tulisan seputar statistika dan pemrograman.
 
-🌐 **Tautan Situs Publik:** [https://github.io](https://github.io)
+🌐 **Tautan Situs Publik:** [https://github.io](https://https://panca0901.github.io)
 
 ---
 
@@ -10,7 +10,7 @@ Situs web portofolio pribadi yang dibangun menggunakan framework **Astro** dan *
 Situs ini dikembangkan dan dikustomisasi dari tema gratis berikut:
 * **Nama Tema:** Simple Portfolio
 * **Pembuat Tema:** VicBox Dot Dev (`vicbox.dev`)
-* **Tautan Tema:** [Galeri Tema Astro - Simple Portfolio](https://astro.build)
+* **Tautan Tema:** [Galeri Tema Astro - Simple Portfolio](https://astro.build/themes/details/simple-portfolio/)
 
 ---
 
