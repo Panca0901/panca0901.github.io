@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    darkMode: ['media'],
+    darkMode: ['class'],
     content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		container: {
@@ -21,19 +21,19 @@ export default {
     		},
 			colors: {
 				// Light mode colors
-				'light-theme': '#E9EBEC',
-				'primary-light': '#FBD144',
-				'primary-hover-light': '#FFE071',
+				'light-theme': '#FDF8FF',
+				'primary-light': '#DB2777',
+				'primary-hover-light': '#BE185D',
 
 				// Dark mode colors
-				'dark-theme': '#0C151D',
-				'primary-dark': '#FFE071',
-				'primary-hover-dark': '#FBD144',
+				'dark-theme': '#140821',
+				'primary-dark': '#F472B6',
+				'primary-hover-dark': '#EC4899',
 
 				// Neutrals
 				'n200': '#d7d9da',
 				'n900': '#222222',
-				'n700': '#171F26',
+				'n700': '#241038',
 				'n500': '#555555',
 			},
     	}

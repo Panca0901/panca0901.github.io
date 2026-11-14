@@ -11,31 +11,34 @@ const resume = "/" + ME.contactInfo.resumeDoc;
 const {linkedin, email} = ME.contactInfo;
 ---
 <div class="profile-action-buttons w-full flex gap-2">
-    <Button
-            data-cv={resume}
-            id="cvBtn"
-            size={'lg'}
-            className="[&_svg]:size-8 px-4 md:px-8 h-14 cv-btn flex-1 text-n700 bg-primary-light dark:bg-primary-dark hover:bg-primary-hover-light dark:hover:bg-primary-hover-dark">
-        Download CV
-        <DownloadArrow width={24} height={24}  />
-    </Button>
-
-    <Button size="icon" className="[&_svg]:size-8 h-14 w-14 li-btn flex-none text-n700 dark:text-n200 bg-white dark:bg-black hover:bg-grey-500 dark:hover:bg-n700 transition-all">
-        <a href={linkedin} aria-label="my linkedIn profile link">
-            <LinkedIn width={24} height={24} />
-        </a>
-    </Button>
-    <Button size="icon" className="[&_svg]:size-6 h-14 w-14 li-btn flex-none dark:text-n200 bg-white dark:bg-black hover:bg-grey-500 dark:hover:bg-n700 transition-all">
-    <a 
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=pangeran3ce@gmail.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="send me an email"
+  <Button
+    data-cv={resume}
+    id="cvBtn"
+    size={'lg'}
+    className="[&_svg]:size-8 px-4 md:px-8 h-14 cv-btn flex-1 text-white dark:text-n700 bg-primary-light dark:bg-primary-dark hover:bg-primary-hover-light dark:hover:bg-primary-hover-dark"
   >
-    <svg viewBox="0 0 24 24" xmlns="http://w3.org" width="24" height="24" class="fill-n700 dark:fill-light-theme" ><path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM20 7.23792L12.0718 14.338L4 7.21594V19H20V7.23792ZM4.51146 5L12.0619 11.662L19.501 5H4.51146Z"></path></svg>
-  </a>
-</Button>
+    Download CV
+    <DownloadArrow width={24} height={24} />
+  </Button>
+
+  <Button size="icon" className="[&_svg]:size-8 h-14 w-14 li-btn flex-none text-n700 dark:text-n200 bg-white dark:bg-n700 hover:bg-grey-500 dark:hover:bg-n700/80">
+    <a href={linkedin} aria-label="my linkedin profile link">
+      <LinkedIn width={24} height={24} />
+    </a>
+  </Button>
+
+  <Button size="icon" className="[&_svg]:size-6 h-14 w-14 li-btn flex-none text-n700 dark:text-n200 bg-white dark:bg-n700 hover:bg-grey-500 dark:hover:bg-n700/80">
+    <a
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=pangeran3ce@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="send me an email"
+    >
+      <svg viewBox="0 0 24 24" xmlns="http://w3.org" width="24" height="24" class="fill-n700 dark:fill-light-theme"><path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM20 7.23792L12.0718 14.338L4 7.21594V19H20V7.23792ZM4.51146 5L12.0619 11.662L19.501 5H4.51146Z"></path></svg>
+    </a>
+  </Button>
 </div>
+
 
 <script>
     const cvBtn = document.getElementById('cvBtn') as HTMLButtonElement;
