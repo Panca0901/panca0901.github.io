@@ -16,7 +16,7 @@ export const SITE = {
 export const ME = {
     name: "Pangeran Candraning Edhi",
     profession: "Statistics Undergraduate | Quantitative Analyst | Data Science",
-    profileImage: "panca1.jpeg",
+    profileImage: "panca2.png",
     profileFacts: [
         {
             value: 3,

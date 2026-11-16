@@ -47,22 +47,22 @@ const pathname = Astro.url.pathname;
                 ))
             }
             <li class="flex items-center space-x-2 py-2 md:py-0">
-                <a 
-                    href="/" 
-                    class:list={[
-                        "font-semibold transition-colors",
-                        !pathname.startsWith("/id") ? "text-primary-light dark:text-primary-dark underline" : "opacity-60 hover:opacity-100"
-                    ]}
-                >EN</a>
-                <span class="opacity-40">|</span>
-                <a 
-                    href="/id/" 
-                    class:list={[
-                        "font-semibold transition-colors",
-                        pathname.startsWith("/id") ? "text-primary-light dark:text-primary-dark underline" : "opacity-60 hover:opacity-100"
-                    ]}
-                >ID</a>
-            </li>
+              <a
+                href={pathname.startsWith("/id") ? (pathname.replace(/^\/id/, "") || "/") : pathname}
+                class:list={[
+                  "font-semibold transition-colors",
+                  !pathname.startsWith("/id") ? "text-primary-light dark:text-primary-dark underline" : "opacity-60 hover:opacity-100"
+                ]}
+             >EN</a>
+             <span class="opacity-40">|</span>
+             <a
+               href={pathname.startsWith("/id") ? pathname : `/id${pathname === "/" ? "/" : pathname}`}
+               class:list={[
+                 "font-semibold transition-colors",
+                 pathname.startsWith("/id") ? "text-primary-light dark:text-primary-dark underline" : "opacity-60 hover:opacity-100"
+               ]}
+             >ID</a>
+           </li>
 			        <li class="flex items-center py-2 md:py-0">
           <button
             id="theme-toggle"
