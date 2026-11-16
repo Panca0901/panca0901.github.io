@@ -26,7 +26,6 @@ Selain mengganti seluruh identitas dan konten pribadi, beberapa peningkatan desa
 ---
 
 ## 🖼️ Perbandingan Tampilan (*Before vs After*)
-*(Opsional: Simpan gambar perbandingan Anda sebagai `preview-compare.png` di dalam folder `public/` agar tampil otomatis di bawah ini).*
 
 ![Perbandingan Template Asli dan Hasil Kustomisasi](./public/preview-compare.png)
 
