@@ -20,8 +20,7 @@ Selain mengganti seluruh identitas dan konten pribadi, beberapa peningkatan desa
 2. **Mode Gelap & Mode Terang (*Dark / Light Mode Toggle*):** Penambahan tombol interaktif di bilah navigasi untuk beralih antara mode gelap dan mode terang pastel-lavender (*frosted glass*) dengan penyimpanan preferensi pengguna (`localStorage`).
 3. **Dukungan Dua Bahasa (`EN | ID`):** Halaman tersedia dalam bahasa Inggris dan bahasa Indonesia.
 4. **Unduh CV Langsung (PDF):** Tombol *Download CV* yang terhubung langsung ke berkas `CV.pdf`.
-5. **Halaman Proyek Terpisah & Blog:** Halaman daftar serta detail proyek analisis data dan artikel blog berbasis *Astro Content Collections*.
-6. **SEO Dasar & Desain Responsif:** Tata letak yang menyesuaikan tampilan layar laptop maupun ponsel.
+5. **SEO Dasar & Desain Responsif:** Tata letak yang menyesuaikan tampilan layar laptop maupun ponsel.
 
 ---
 
