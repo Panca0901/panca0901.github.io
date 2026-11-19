@@ -8,8 +8,8 @@ interface Language {
 const languages: Language[] = [
     {
         name: "English",
-        level: "Native",
-        description: "I speak fluently and write fluently",
+        level: "Basic",
+        description: "Able to understand basic vocabulary and read simple technical documentation, currently improving sentence structure and everyday communication.",
         show: true
     },
     {
@@ -25,10 +25,10 @@ const languages: Language[] = [
         show: false
     },
     {
-        name: "Italian",
-        level: "B2",
-        description: "I speak fluently and write fluently",
-        show: false
+        name: "Indonesian",
+        level: "Native",
+        description: "ative speaker with strong command of formal and academic Indonesian, experienced in writing statistical reports and presenting analytical insights clearly.",
+        show: true
     }
 ];
 

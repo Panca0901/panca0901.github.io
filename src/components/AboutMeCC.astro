@@ -22,7 +22,7 @@ import { ME, ME_ID } from '@/config';
             {ME.aboutMe}
         </p>
     </div>
-    {/*Work experience section*/}
+    {/*Work experience section
     <div class="mb-4">
         <h2 data-i18n="about_work_title" class="text-3xl font-bold mb-4">Work Experience</h2>
         <div class="flex flex-col gap-6">
@@ -31,16 +31,17 @@ import { ME, ME_ID } from '@/config';
             ))}
         </div>
     </div>
+	*/}
     {/*Education section*/}
     <div class="mb-4">
         <h2 data-i18n="about_edu_title" class="text-3xl font-bold mb-4">Education</h2>
         <div class="flex flex-col gap-6">
-            {education.map((edu) => (
-                    <EduDetail eduData={edu}/>
+            {education.map((edu, index) => (
+                    <EduDetail eduData={edu} index={index}/>
             ))}
         </div>
     </div>
-    {/*Skills section*/}
+    {/*Skills section
     <div class="mb-4">
         <h2 data-i18n="about_hardskills_title" class="text-3xl font-bold mb-4">Hard Skills</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -49,7 +50,8 @@ import { ME, ME_ID } from '@/config';
             ))}
         </div>
     </div>
-    {/*Hobbies section*/}
+	*/}
+    {/*Hobbies section
     <div class="mb-4">
         <h2 data-i18n="about_softskills_title" class="text-2xl font-bold mb-4">Soft Skills</h2>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -58,6 +60,7 @@ import { ME, ME_ID } from '@/config';
             ))}
         </div>
     </div>
+	*/}
     {/*Languages section*/}
     <div class="mb-4">
         <h2 data-i18n="about_lang_title" class="text-2xl font-bold mb-4">Languages</h2>

@@ -19,16 +19,16 @@ export const ME = {
     profileImage: "panca2.png",
     profileFacts: [
         {
-            value: 0,
-            description: "Years of Experience"
+            value: 2,
+            description: "Organizational Experience"
         },
         {
             value: 3,
             description: "Completed Projects"
         },
         {
-            value: 0,
-            description: "Satisfied Clients"
+            value: 5,
+            description: "Activities & Trainings"
         }
     ],
     contactInfo: {
@@ -36,7 +36,7 @@ export const ME = {
         linkedin: "https://www.linkedin.com/in/pangeran-candraning-edhi-aa96683bb",
         resumeDoc: "CV.pdf",
     },
-    aboutMe: "I am a Statistics undergraduate with a strong passion for Data Science and Quantitative Analysis. I am experienced in turning complex datasets into actionable insights..."
+    aboutMe: "Hello, I am Pangeran Candraning Edhi, a Statistics undergraduate at Cenderawasih University with a strong focus on Quantitative Analysis and Data Science. I specialize in turning complex raw datasets into clear, actionable insights through statistical modeling, computational analysis (R, Python, SPSS), and interactive data visualization. Alongside my academic pursuits, I actively develop modern web portfolios and sharpen my leadership and teamwork skills through organizational and community initiatives."
 }
 
 export const ME_ID = {
@@ -45,16 +45,16 @@ export const ME_ID = {
     profileImage: "panca1.jpeg",
     profileFacts: [
         {
-            value: 3,
-            description: "Tahun Pengalaman"
+            value: 2,
+            description: "Pengalaman Organisasi"
         },
         {
-            value: 5,
+            value: 3,
             description: "Proyek Selesai"
         },
         {
-            value: 4,
-            description: "Klien Puas"
+            value: 5,
+            description: "Kegiatan & Pelatihan"
         }
     ],
     contactInfo: {
@@ -62,7 +62,7 @@ export const ME_ID = {
         linkedin: "https://www.linkedin.com/in/pangeran-candraning-edhi-aa96683bb",
         resumeDoc: "CV.pdf",
     },
-    aboutMe: "Saya adalah mahasiswa Statistika yang memiliki ketertarikan besar di bidang Data Science dan Quantitative Analysis. Saya terbiasa..."
+    aboutMe: "Halo, saya Pangeran Candraning Edhi, mahasiswa S1 Statistika di Universitas Cenderawasih dengan fokus utama pada Analisis Kuantitatif dan Data Science. Saya berfokus mengolah kumpulan data mentah yang kompleks menjadi wawasan yang jelas dan dapat ditindaklanjuti melalui pemodelan statistik, komputasi data (R, Python, SPSS), serta visualisasi data interaktif. Di samping kegiatan akademik, saya juga mengembangkan portofolio web modern serta mengasah kemampuan kepemimpinan dan kerja tim melalui berbagai kegiatan organisasi dan pengabdian masyarakat."
 }
 
 export const SOCIALS = [
