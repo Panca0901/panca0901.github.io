@@ -33,36 +33,38 @@ const pathname = Astro.url.pathname;
         </div>
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-2" id="navbar-sticky">
                     <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
-            {
+			{
                 menu.map((item) => (
                     <li>
                         <a
                             href={item.href}
                             class:list={[
                                 {"block py-2 px-0 rounded md:p-0": true},
-                                {"active": pathname === item.href},
-                            ]}>{item.label}
+                                {"active": pathname === item.href}
+                            ]}>
+                            {item.label}
                         </a>
                     </li>
                 ))
             }
-            <li class="flex items-center space-x-2 py-2 md:py-0">
-              <a
-                href={pathname.startsWith("/id") ? (pathname.replace(/^\/id/, "") || "/") : pathname}
-                class:list={[
-                  "font-semibold transition-colors",
-                  !pathname.startsWith("/id") ? "text-primary-light dark:text-primary-dark underline" : "opacity-60 hover:opacity-100"
-                ]}
-             >EN</a>
-             <span class="opacity-40">|</span>
-             <a
-               href={pathname.startsWith("/id") ? pathname : `/id${pathname === "/" ? "/" : pathname}`}
-               class:list={[
-                 "font-semibold transition-colors",
-                 pathname.startsWith("/id") ? "text-primary-light dark:text-primary-dark underline" : "opacity-60 hover:opacity-100"
-               ]}
-             >ID</a>
-           </li>
+
+            <li class="flex items-center space-x-2 py-2 md:py-0 notranslate">
+                <button
+                    type="button"
+                    onclick="changeLanguage('en')"
+                    id="btn-lang-en"
+                    class="font-semibold cursor-pointer transition-colors hover:opacity-100">
+                    EN
+                </button>
+                <span class="opacity-40">|</span>
+                <button
+                    type="button"
+                    onclick="changeLanguage('id')"
+                    id="btn-lang-id"
+                    class="font-semibold cursor-pointer opacity-60 transition-colors hover:opacity-100">
+                    ID
+                </button>
+            </li>
 			        <li class="flex items-center py-2 md:py-0">
           <button
             id="theme-toggle"

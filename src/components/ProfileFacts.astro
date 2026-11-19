@@ -7,10 +7,14 @@ const { profileFacts } = isIndonesian ? ME_ID : ME;
 ---
 
 <div class="flex justify-between gap-1 text-center">
-    {profileFacts.map((fact) => (
-        <div class="flex flex-col items-center justify-center gap-2">
-            <h3 class="text-md font-bold text-n900 dark:text-n200">{`${fact.value}+`}</h3>
-            <p class="text-sm text-n700 dark:text-n200">{fact.description}</p>
-        </div>
-    ))}
+    {profileFacts.map((fact, index) => {
+        const statKeys = ["stat_exp", "stat_proj", "stat_clients"];
+        return (
+            <div class="flex flex-col items-center justify-center gap-2">
+                <h3 class="text-md font-bold text-n900 dark:text-n200">{`${fact.value}+`}</h3>
+                <p data-i18n={statKeys[index]} class="text-sm text-n700 dark:text-n200">{fact.description}</p>
+            </div>
+        );
+    })}
+
 </div>
