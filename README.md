@@ -2,7 +2,7 @@
 
 Situs web portofolio pribadi yang dibangun menggunakan framework **Astro** dan **Tailwind CSS**, serta dipublikasikan secara otomatis menggunakan **GitHub Actions** ke **GitHub Pages**. Situs ini dibuat untuk menampilkan profil akademik, latar belakang pendidikan di Program Studi Statistika FMIPA Universitas Cenderawasih, proyek analisis data, serta tulisan seputar statistika dan pemrograman.
 
-🌐 **Tautan Situs Publik:** [https://github.io](https://panca0901.github.io)
+🌐 **Tautan Situs Publik:** [https://panca0901.github.io](https://panca0901.github.io)
 
 ---
 
@@ -20,8 +20,7 @@ Selain mengganti seluruh identitas dan konten pribadi, beberapa peningkatan desa
 2. **Mode Gelap & Mode Terang (*Dark / Light Mode Toggle*):** Penambahan tombol interaktif di bilah navigasi untuk beralih antara mode gelap dan mode terang pastel-lavender (*frosted glass*) dengan penyimpanan preferensi pengguna (`localStorage`).
 3. **Dukungan Dua Bahasa (`EN | ID`):** Halaman tersedia dalam bahasa Inggris dan bahasa Indonesia.
 4. **Unduh CV Langsung (PDF):** Tombol *Download CV* yang terhubung langsung ke berkas `CV.pdf`.
-5. **Halaman Proyek Terpisah & Blog:** Halaman daftar serta detail proyek analisis data dan artikel blog berbasis *Astro Content Collections*.
-6. **SEO Dasar & Desain Responsif:** Tata letak yang menyesuaikan tampilan layar laptop maupun ponsel.
+5. **SEO Dasar & Desain Responsif:** Tata letak yang menyesuaikan tampilan layar laptop maupun ponsel.
 
 ---
 
@@ -37,7 +36,7 @@ Pastikan **Node.js (versi LTS)** dan **Git** sudah terpasang di komputer Anda.
 
 1. **Kloning repositori ini:**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/Panca0901/panca0901.github.io.git
    cd panca0901.github.io
    ```
 
@@ -59,4 +58,4 @@ Pastikan **Node.js (versi LTS)** dan **Git** sudah terpasang di komputer Anda.
 ## 👤 Kontak
 * **Nama:** Pangeran Candraning Edhi
 * **Program Studi:** Statistika, FMIPA, Universitas Cenderawasih
-* **GitHub:** [@Panca0901](https://github.com)
+* **GitHub:** [@Panca0901](https://github.com/Panca0901)
