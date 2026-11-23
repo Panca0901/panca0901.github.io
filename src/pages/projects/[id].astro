@@ -55,7 +55,7 @@ const { Content } = await render(post);
             Visit the project ↗
         </a>
 
-        <article id="article" class="mt-8 prose dark:prose-invert">
+                <article id="article" class="mt-8 prose max-w-none text-gray-800 dark:text-gray-200 dark:prose-invert">
             <Content/>
         </article>
         <BackToTop />
@@ -65,5 +65,8 @@ const { Content } = await render(post);
 <style is:global>
     h2 {
         @apply text-2xl font-bold my-4;
+    }
+    #article p, #article .lang-en, #article .lang-id {
+        @apply text-gray-800 dark:text-gray-200 leading-relaxed;
     }
 </style>
