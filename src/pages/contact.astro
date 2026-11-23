@@ -1,0 +1,104 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BackToTop from "../components/BackToTop.astro";
+---
+
+<Layout title="Contact | Pangeran Candraning Edhi" description="Get in touch with me" scrollSmooth={true}>
+    <div class="max-w-2xl mx-auto my-12 px-4">
+        <div class="text-center mb-8">
+            <h1 
+                class="text-3xl md:text-4xl font-bold mb-3 lang-switch"
+                data-en="Contact Me"
+                data-id="Hubungi Saya"
+            >
+                Contact Me
+            </h1>
+            <p 
+                class="text-gray-600 dark:text-gray-300 lang-switch"
+                data-en="Have a question, project idea, or collaboration opportunity? Feel free to send me a message below."
+                data-id="Punya pertanyaan, ide proyek, atau peluang kolaborasi? Silakan kirimkan pesan Anda melalui formulir di bawah ini."
+            >
+                Have a question, project idea, or collaboration opportunity? Feel free to send me a message below.
+            </p>
+        </div>
+
+        <form 
+            action="https://api.web3forms.com/submit" 
+            method="POST" 
+            class="bg-white/80 dark:bg-n700/80 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg flex flex-col gap-5"
+        >
+            <!-- GANTI TEKS DI BAWAH DENGAN ACCESS KEY DARI WEB3FORMS -->
+            <input type="hidden" name="access_key" value=293e6a15-7154-483e-b5fc-499604596263" />
+            
+            <!-- Judul email yang masuk ke inbox Anda -->
+            <input type="hidden" name="subject" value="Pesan Baru dari Website Portofolio!" />
+
+            <div>
+                <label 
+                    for="name" 
+                    class="block text-sm font-semibold mb-2 text-gray-800 dark:text-gray-200 lang-switch"
+                    data-en="Full Name"
+                    data-id="Nama Lengkap"
+                >
+                    Full Name
+                </label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required 
+                    placeholder="John Doe"
+                    class="w-full px-4 py-2.5 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+                />
+            </div>
+
+            <div>
+                <label 
+                    for="email" 
+                    class="block text-sm font-semibold mb-2 text-gray-800 dark:text-gray-200 lang-switch"
+                    data-en="Email Address"
+                    data-id="Alamat Email"
+                >
+                    Email Address
+                </label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    placeholder="email@example.com"
+                    class="w-full px-4 py-2.5 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+                />
+            </div>
+
+            <div>
+                <label 
+                    for="message" 
+                    class="block text-sm font-semibold mb-2 text-gray-800 dark:text-gray-200 lang-switch"
+                    data-en="Message"
+                    data-id="Isi Pesan"
+                >
+                    Message
+                </label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="5" 
+                    required 
+                    placeholder="Write your message here..."
+                    class="w-full px-4 py-2.5 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+                ></textarea>
+            </div>
+
+            <button 
+                type="submit" 
+                class="w-full py-3 px-6 rounded-xl bg-pink-600 hover:bg-pink-700 text-white font-semibold transition-colors cursor-pointer lang-switch"
+                data-en="Send Message ✉️"
+                data-id="Kirim Pesan ✉️"
+            >
+                Send Message ✉️
+            </button>
+        </form>
+    </div>
+    <BackToTop />
+</Layout>
