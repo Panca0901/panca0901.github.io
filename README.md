@@ -1,6 +1,7 @@
 # Web Portofolio Pribadi — Pangeran Candraning Edhi
 
-Situs web portofolio pribadi yang dibangun menggunakan framework **Astro** dan **Tailwind CSS**, serta dipublikasikan secara otomatis menggunakan **GitHub Actions** ke **GitHub Pages**. Situs ini dibuat untuk menampilkan profil akademik, latar belakang pendidikan di Program Studi Statistika FMIPA Universitas Cenderawasih, proyek analisis data, serta tulisan seputar statistika dan pemrograman.
+"Situs ini dibuat untuk menampilkan profil akademik, latar belakang pendidikan di Program Studi Statistika FMIPA Universitas Cenderawasih, portofolio proyek dan kegiatan, serta formulir kontak interaktif."
+
 
 🌐 **Tautan Situs Publik:** [https://panca0901.github.io](https://panca0901.github.io)
 
@@ -14,13 +15,26 @@ Situs ini dikembangkan dan dikustomisasi dari tema gratis berikut:
 
 ---
 
-## ✨ Fitur & Kustomisasi yang Dikerjakan
-Selain mengganti seluruh identitas dan konten pribadi, beberapa peningkatan desain dan fitur fungsional yang ditambahkan meliputi:
-1. **Kustomisasi Tema Visual & Latar Belakang 3D Data Dashboard:** Mengubah palet warna dasar menjadi tema *Deep Purple & Magenta* dengan ilustrasi vektor SVG *3D Isometric Data Dashboard* (kubus isometrik, *surface wave plot*, diagram batang 3D, panel hologram, dan radar beranimasi halus) yang selaras dengan bidang Statistika & *Data Science*.
-2. **Mode Gelap & Mode Terang (*Dark / Light Mode Toggle*):** Penambahan tombol interaktif di bilah navigasi untuk beralih antara mode gelap dan mode terang pastel-lavender (*frosted glass*) dengan penyimpanan preferensi pengguna (`localStorage`).
-3. **Dukungan Dua Bahasa (`EN | ID`):** Halaman tersedia dalam bahasa Inggris dan bahasa Indonesia.
-4. **Unduh CV Langsung (PDF):** Tombol *Download CV* yang terhubung langsung ke berkas `CV.pdf`.
-5. **SEO Dasar & Desain Responsif:** Tata letak yang menyesuaikan tampilan layar laptop maupun ponsel.
+## Perubahan & Fitur Tambahan yang Dikerjakan
+Dibandingkan dengan template asli, berbagai kustomisasi konten, tampilan, dan fungsionalitas telah ditambahkan:
+
+1. **Kustomisasi Identitas & Konten Akademik**
+   - Mengubah seluruh informasi profil, bio, statistik ringkas, serta latar belakang pendidikan (*S1 Statistika Universitas Cenderawasih* dan *SMAN 4 Jayapura*).
+   - Mengganti logo, favicon, skema warna aksen, serta menyusun 5 dokumentasi proyek dan kegiatan (*Mathematics Bootcamp Training Program*, *OSIS × Ganesha Operation Strategic Collaboration*, *SMAN 4 Jayapura Graduation Committee*, *Charity Visit & Community Service*, dan *OSIS/MPK Basic Leadership Training*) menggunakan *Astro Content Collections* (`.mdx`).
+2. **Fitur Dua Bahasa (Inggris & Indonesia — `EN | ID`)**
+   - Menambahkan tombol pengalih bahasa di bilah navigasi yang menerjemahkan seluruh konten halaman Beranda, Pendidikan, Kartu Proyek, Halaman Detail Proyek, hingga Halaman Kontak secara dinamis menggunakan `localStorage` dan kamus terjemahan terintegrasi.
+3. **Mode Gelap & Mode Terang (*Dark / Light Mode*)**
+   - Menambahkan tombol sakelar tema di bagian *header* beserta penyesuaian kontras warna teks pada mode terang maupun gelap.
+4. **Halaman Proyek Terpisah & Galeri Dokumentasi**
+   - Setiap proyek memiliki halaman detail masing-masing (`/projects/[id]`) yang memuat gambar sampul, kategori/tag, ringkasan, deskripsi lengkap dua bahasa, serta tautan dokumentasi eksternal.
+5. **Formulir Kontak Fungsional (`/contact`)**
+   - Mengganti halaman blog bawaan menjadi halaman kontak interaktif yang terhubung dengan layanan **Web3Forms API**, sehingga pesan dari pengunjung langsung terkirim ke email pribadi.
+6. **Tombol Unduh CV & Navigasi Mulus (*View Transitions*)**
+   - Menyediakan tombol *Download CV* pada bagian profil utama, efek transisi antarhalaman yang halus, serta pengalihan otomatis (`/home` ke `/`) untuk mencegah galat 404.
+7. **SEO Dasar & Responsivitas**
+   - Dilengkapi metadata judul, deskripsi halaman, gambar *Open Graph*, dan tata letak responsif untuk tampilan perangkat seluler maupun desktop.
+8. **Kustomisasi Tema Visual & Latar Belakang 3D Data Dashboard:** Mengubah palet warna dasar menjadi tema Deep Purple & Magenta dengan ilustrasi vektor SVG 3D Isometric Data Dashboard beranimasi halus yang selaras dengan bidang Statistika & Data Science.
+
 
 ---
 
