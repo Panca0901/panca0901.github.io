@@ -83,5 +83,11 @@ code {
     transition: color 0.5s;
 }
 #article p, #article .lang-en, #article .lang-id {
-    @apply text-gray-800 dark:text-gray-200 leading-relaxed;
+    color: #1f2937 !important;
+    line-height: 1.75;
 }
+
+html.dark #article p, html.dark #article .lang-en, html.dark #article .lang-id {
+    color: #e5e7eb !important;
+}
+
