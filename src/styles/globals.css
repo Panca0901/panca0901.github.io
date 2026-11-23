@@ -82,3 +82,6 @@ code {
     font-size: 0.875rem;
     transition: color 0.5s;
 }
+#article p, #article .lang-en, #article .lang-id {
+    @apply text-gray-800 dark:text-gray-200 leading-relaxed;
+}
