@@ -1,6 +1,6 @@
 export const menu = [
     {
-        href: '/home',
+        href: '/',
         label: 'Home',
     },
     {
