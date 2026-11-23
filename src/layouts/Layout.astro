@@ -374,6 +374,18 @@ const {
             btnId.classList.remove('text-primary-light', 'dark:text-primary-dark', 'underline');
           }
         }
+              // Sinkronisasi judul, ringkasan, dan isi halaman Projects
+        document.querySelectorAll('.lang-switch').forEach((el) => {
+            const text = el.getAttribute(`data-${lang}`);
+            if (text) el.textContent = text;
+        });
+
+        document.querySelectorAll('.lang-en').forEach((el) => {
+            el.classList.toggle('hidden', lang !== 'en');
+        });
+        document.querySelectorAll('.lang-id').forEach((el) => {
+            el.classList.toggle('hidden', lang !== 'id');
+        });
       }
 
       function applySavedLanguage() {
@@ -382,7 +394,7 @@ const {
       }
 
       document.addEventListener('DOMContentLoaded', applySavedLanguage);
-      document.addEventListener('astro:page-load', applySavedLanguage);
+      document.addEventListener('astro:page-load', applySavedLanguage);	  
     </script>
 </body>
 </html>

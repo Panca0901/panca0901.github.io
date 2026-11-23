@@ -38,6 +38,7 @@ const pathname = Astro.url.pathname;
                     <li>
                         <a
                             href={item.href}
+							data-i18n={`nav_${item.label.toLowerCase()}`}
                             class:list={[
                                 {"block py-2 px-0 rounded md:p-0": true},
                                 {"active": pathname === item.href}

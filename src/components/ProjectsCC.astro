@@ -20,11 +20,13 @@ const allProjects = (await getCollection('projects'))
             {
                 allProjects.map((project) => (
                         <ProjectCard
-                                id={project.id}
-                                title={project.data.title}
-                                summary={project.data.summary}
-                                tags={project.data.tags}
-                                cover={project.data.cover}
+								id={project.id}
+								title={project.data.title}
+								titleId={project.data.titleId}
+								summary={project.data.summary}
+								summaryId={project.data.summaryId}
+								tags={project.data.tags}
+								cover={project.data.cover}
                         />
                 ))
             }
