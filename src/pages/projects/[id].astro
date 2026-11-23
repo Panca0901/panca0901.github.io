@@ -1,4 +1,3 @@
-
 ---
 import { getCollection, render } from "astro:content";
 import { Image } from "astro:assets";
@@ -15,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { title, summary, tags, cover, ogImage, url } = post.data;
+const { title, titleId, summary, summaryId, tags, cover, ogImage, url } = post.data;
 
 const { Content } = await render(post);
 
@@ -26,16 +25,33 @@ const { Content } = await render(post);
             <BackBtn/>
         </div>
         <div class="flex flex-col gap-6 justify-center items-center">
-            <h1 class="text-3xl font-bold text-center">{title}</h1>
+            <h1 
+                class="text-3xl font-bold text-center lang-switch"
+                data-en={title}
+                data-id={titleId || title}
+            >
+                {title}
+            </h1>
             <p class="text-sm text-n500 dark:text-primary-light ">
                 {tags.join(', ')}
             </p>
         </div>
         <Image transition:name={`${post.id}-image`} class="rounded-2xl" src={cover} alt="Main project image"/>
-        <p>
+        <p 
+            class="lang-switch"
+            data-en={summary}
+            data-id={summaryId || summary}
+        >
             {summary}
         </p>
-        <a href={url}>
+        <a 
+            href={url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="lang-switch"
+            data-en="Visit the project ↗"
+            data-id="Lihat dokumentasi ↗"
+        >
             Visit the project ↗
         </a>
 
@@ -51,4 +67,3 @@ const { Content } = await render(post);
         @apply text-2xl font-bold my-4;
     }
 </style>
-

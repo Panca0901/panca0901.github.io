@@ -23,7 +23,7 @@ const allProjects = (await getCollection('projects'))
         <!--Projects Section-->
         <section class="border-bottom">
             <div class="mb-4">
-                <h2 class="text-3xl font-bold mb-8">All My Projects</h2>
+                <h2 class="text-3xl font-bold mb-8 lang-switch" data-en="All My Projects" data-id="Semua Proyek Saya">All My Projects</h2>
             </div>
         </section>
         <!--Projects List-->
@@ -31,11 +31,13 @@ const allProjects = (await getCollection('projects'))
             {allProjects.length > 0 ? (
                 allProjects.map((project: Project) => (
                         <ProjectCardList
-                                id={project.id}
-                                title={project.data.title}
-                                tags={project.data.tags}
-                                cover={project.data.cover}
-                        />
+								id={project.id}
+								title={project.data.title}
+								titleId={project.data.titleId}
+								tags={project.data.tags}
+								cover={project.data.cover}
+						/>
+
                 ))
             ) : (
                     <p>No projects found.</p>
